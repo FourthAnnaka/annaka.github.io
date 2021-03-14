@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,600;1,400&display=swap');
+
+html, body {
+    background-color: #262536;
+    color: #7C8CFF;
+}
+
+#container {
+    width: 75vw;
+    max-width: 900px;
+    margin: auto;
+}
+
+hr {
+    background-color: #909A9F;
+    height: 1px;
+    border: 0px ;
+}
+
+p, h1, h2, li {
+    font-family: 'Work Sans', sans-serif;
+
+}
+
+h1 {
+    font-weight: 600, regular;
+    font-size: 38pt;
+    color: #C4CACD;
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 25pt;
+    color: #909A9F;
+
+}
+
+p, li {
+    font-weight: 400, regular;
+    font-size: 18pt;
+    line-height: 24pt;
+}
+
+header {
+    margin-bottom: 200px;
+    padding-top: 100px;
+}
+
+.definition {
+    font-family: serif;
+}
+
+#illustration {
+    height: 900px;
+    margin: 100px 0;
+}
+
+#smoke-01 {
+    width: 900px;
+    height:900px;
+    -webkit-animation: rotation 10s infinite linear;
+    background-image: url("../img/smoke-01.png");
+    background-size: contain;
+}
+#smoke-02 {
+    width: 900px;
+    height:900px;
+    -webkit-animation: rotation-back 10s infinite linear;
+    background-image: url("../img/smoke-02.png");
+    background-size: contain;
+    position: relative;
+    top: -900px;
+}
+
+#knife-01 {
+    background-image: url("../img/knife_04.png");
+    width: 800px;
+    height: 800px;
+    /* border: 1px solid seagreen; */
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: auto;
+    position: relative;
+    top: -1800px;
+}
+
+@-webkit-keyframes rotation {
+    from {
+            -webkit-transform: rotate(0deg);
+    }
+    to {
+            -webkit-transform: rotate(359deg);
+    }
+}
+
+@-webkit-keyframes rotation-back {
+    from {
+            -webkit-transform: rotate(0deg);
+    }
+    to {
+            -webkit-transform: rotate(-359deg);
+    }
+}
