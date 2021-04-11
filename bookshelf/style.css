@@ -1,0 +1,291 @@
+@import url("https://use.typekit.net/mnz8qws.css");
+
+/* universal styles & elements */
+
+body, html {
+    background-color: gainsboro;
+    padding: 0px;
+    margin: 0px;
+    font-weight: 400;
+    overflow: hidden;
+    line-height: 1.2;
+}
+
+.normal {
+    font-style: normal;
+    border-left: 3px solid;
+}
+
+img.book-cover { 
+    width: 150px;
+    mix-blend-mode: luminosity;
+    padding: 0;
+    margin: 0;
+    margin-bottom: -4px;
+}
+
+img.mobile-book-cover  { 
+    height: 250px;
+    mix-blend-mode: luminosity;
+    padding: 0;
+    margin: 0;
+    margin-bottom: -4px;
+    display: none;
+}
+
+
+
+
+.hidden {
+    visibility: hidden;
+}
+
+
+
+div.title-circle.active h2  {
+    /* font-family: nimbus-sans, sans-serif; */
+    /* font-style: normal; */
+
+}
+
+
+/* containers, navs, main layout */
+
+nav { 
+    border-bottom: 3px solid #000;
+    position: fixed;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 0px;
+    background-color: gainsboro;
+    z-index: 10;
+}
+
+
+
+/* 
+.main-container {
+
+} */
+
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+}
+
+.block-scroll {
+    height: 100vh;
+    width: 50vw;
+    overflow-y: scroll;
+    overflow-x:hidden;
+}
+
+.titles {
+    background-color: black;
+}
+
+.information {
+    border-left: 3px solid #000;
+}
+
+/* javascript input boxes  */
+
+.title-circle { 
+    padding: 1rem;
+    border-top: 3px solid #000;
+    border-radius: 60%;
+    background-color: gainsboro;
+
+}
+
+.title-circle:first-child {
+    margin-top: 60px;
+}
+.title-circle:last-child {
+    margin-bottom: 20px;
+}
+
+#book-data {
+    /* margin-top: 60px; */
+    margin: 47px 0 300px 0;
+}
+
+
+/* typography */
+
+h1 {
+    font-family: swear-display, serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 38pt; 
+    margin: 0;
+}
+
+#book-data p { 
+    /* text-decoration: underline; */
+    font-family: nimbus-sans-extended, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24pt;
+    margin: 0px;
+    margin-top: 35px;
+}
+
+h2.book-title {
+    text-align: center;
+    font-family: swear-display, serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 28pt; 
+    /* filter: url(#shadow) */
+}
+
+#book-data .serif {
+    font-family: swear-display, serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 26pt; 
+    margin: 0;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    max-width: 975px;
+}
+
+
+/* draggable div */
+
+.filter {
+    display: none;
+  }  /* for the drop shadow */
+
+#drag-me {
+    position: absolute;
+    top: 13vh;
+    right: 10vw;
+    z-index: 15;
+    background-color: gainsboro;
+    text-align: center;
+    border-left: 1px solid #000;
+    width: 150px;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    filter: url("#shadow");
+    cursor: move;
+  }
+  
+#drag-header {
+    padding: 10px;
+    z-index: 10;
+    background-color: gainsboro;
+    color: #000;
+    /* height: 50px; */
+    border: 1px solid;
+    border-left: 0px solid;
+  }
+
+  #drag-header p {
+      padding: 0;
+      margin: -10px 0;
+    font-size: 28pt;
+    position: relative;
+    top: -3px;
+      font-style: normal;
+    font-weight: 400;
+    font-family: nimbus-sans-extended, sans-serif;
+    text-decoration: none;
+  }
+
+
+
+/* scrollbar */
+
+/* width */
+::-webkit-scrollbar {
+    width: 9px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: gainsboro; 
+  }
+.information::-webkit-scrollbar-track {
+    background:black; 
+  } 
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #cada00; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #000; 
+  }
+
+  .active { 
+    /* background-image: url('imgs/seamless.gif'); */
+    /* background-repeat: repeat;*/
+    /* -webkit-box-shadow: inset 0 0 35px #000;
+    -moz-box-shadow:    inset 0 0 35px #000;
+    box-shadow:         inset 0 0 35px #000; */
+    filter: url("#shadow");
+    /* color: orange; */
+    /* mix-blend-mode: luminosity;      */
+    position: relative;
+    transform: translateY(20px);
+    transition: transform  300ms ;
+    transition-timing-function: ease;
+    transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+    background-color: #cada00;
+}
+
+
+  /* responsive breakpoints */
+
+  @media only screen and (max-width: 600px) {
+        /* typography */
+        h1 {
+            font-size: 28pt; 
+        }
+
+        #book-data p { 
+            font-size: 17pt;
+            line-height: 1;
+        }
+        
+        h2.book-title {
+            font-size: 22pt; 
+            /* filter: url(#shadow) */
+        }
+        
+        #book-data .serif {
+            font-size: 18pt; 
+            margin: 0;
+            margin-top: 10px;
+            margin-bottom: 0px;
+        }
+
+        div.mobile-titlewrap {
+            height: 140px;
+        }
+
+        .data-title {
+            padding-bottom: 50px;
+        }
+
+        #drag-me {
+            display: none;
+        }
+
+        img.mobile-book-cover  { 
+            display: block;
+        }
+
+        #book-data .serif {
+            padding-right: 20px;
+        }
+
+  }

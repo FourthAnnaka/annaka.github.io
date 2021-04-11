@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2021 Fiction Reading</title>
+    <link rel="stylesheet" href="./normalize.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<div class="main-container">
+    <nav>    
+        <h1>2021 in Fiction</h1>
+        <h1 class="normal">Annaka Olsen</h1>
+    </nav>
+    <div class="container">
+        
+        <!-- right column for book title list -->
+        <div class="titles block-scroll">
+        </div>
+        
+        <!-- left column for book information to populate, see corresponding javascript for API -->
+        <div class="information block-scroll">
+            <div id="book-data" class="hidden">
+            <!-- <div class="mobile-titlewrap">
+            <p>title:</p>             
+              <p class="data-title serif">placeholder</p>
+            </div> -->
+            <div class="mobile-coverwrap"> 
+                <img class="mobile-book-cover" src="" alt="the book's"></img>
+            </div>
+            <p>published:</p>
+              <p class="data-pubdate serif">placeholder</p>
+              <div id="drag-me">  
+                <div id="drag-header"><p class="label">cover</p></div>
+                <img class="book-cover" src="" alt="the book's"></img>
+                </div>
+            <p>publishers description:</p>
+              <p class="data-pubdesc serif">placeholder</p>
+
+
+
+            </div>
+        </div> <!-- closing right column  -->
+        
+
+
+    </div> <!-- closing main container -->
+</div>
+<script src="lib/airtable.browser.js"></script>
+<script src="./script.js"></script>
+
+<!-- svg filter for drop shadow -->
+<svg xmlns="http://www.w3.org/2000/svg" class="filter">
+    <defs>
+      <filter id="shadow">
+          <feTurbulence type="turbulence" baseFrequency="0.25"
+          numOctaves="5" result="turbulence"/>
+          <feDisplacementMap in2="turbulence" in="SourceGraphic"
+          scale="20" xChannelSelector="R" yChannelSelector="G" result="grainyShadow"/>
+          <feDisplacementMap in2="turbulence" in="SourceGraphic"
+          scale="50" xChannelSelector="R" yChannelSelector="G" result="grainyShadow2"/>
+          <feColorMatrix in="grainyShadow" result="colorCorrected"
+            type="matrix"
+            values="1 0 0 -1 0
+                    0 0 0 -1 0
+                    0 0 0 -1 0
+                    0 0 0 1 0" />
+        <feColorMatrix in="grainyShadow2" result="colorCorrected2"
+            type="matrix"
+            values="1 0 0 -1 0
+                    0 0 0 -1 0
+                    0 0 0 -1 0
+                    0 0 0 1 0" />
+  
+         <feMerge>
+           <feMergeNode in="colorCorrected"/>
+           <feMergeNode in="colorCorrected2"/>
+           <feMergeNode in="SourceGraphic"/>
+         </feMerge>
+        
+      </filter>
+    </defs>
+  </svg>
+  
+
+</body>
+</html>
+
