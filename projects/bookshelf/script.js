@@ -7,9 +7,8 @@ console.log(Airtable);
 // add your API Key 
 let base = new Airtable({apiKey: 'keyxzRGZmL7bzSL5C'}).base('appaAeT1Q4EqQ5SKz');
 
-// get our collectio base, select all records
-base("2021").select({sort:[{field: "date_complete", direction: "asc"}]
-
+// get our collection base, select all records
+base("2021").select({sort:[{field: "date_complete", direction: "desc"}]
 }).eachPage(gotPageOfBooks, gotAllBooks); 
 
 //an empty array for the data 

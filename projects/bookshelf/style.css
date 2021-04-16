@@ -140,7 +140,6 @@ h2.book-title {
     font-weight: 400;
     font-style: italic;
     font-size: 28pt; 
-    /* filter: url(#shadow) */
 }
 
 #book-data .serif {
@@ -157,10 +156,6 @@ h2.book-title {
 
 /* draggable div */
 
-.filter {
-    display: none;
-  }  /* for the drop shadow */
-
 #drag-me {
     position: absolute;
     top: 13vh;
@@ -173,7 +168,6 @@ h2.book-title {
     height: auto;
     padding: 0;
     margin: 0;
-    filter: url("#shadow");
     cursor: move;
   }
   
@@ -231,9 +225,6 @@ h2.book-title {
     /* -webkit-box-shadow: inset 0 0 35px #000;
     -moz-box-shadow:    inset 0 0 35px #000;
     box-shadow:         inset 0 0 35px #000; */
-    filter: url("#shadow");
-    /* color: orange; */
-    /* mix-blend-mode: luminosity;      */
     position: relative;
     transform: translateY(20px);
     transition: transform  300ms ;
@@ -258,7 +249,6 @@ h2.book-title {
         
         h2.book-title {
             font-size: 22pt; 
-            /* filter: url(#shadow) */
         }
         
         #book-data .serif {

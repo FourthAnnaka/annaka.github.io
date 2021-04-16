@@ -15,6 +15,7 @@
         <h1 class="normal">Annaka Olsen</h1>
     </nav>
     <div class="container">
+      <img src="" alt="">
         
         <!-- right column for book title list -->
         <div class="titles block-scroll">
@@ -51,39 +52,6 @@
 <script src="lib/airtable.browser.js"></script>
 <script src="./script.js"></script>
 
-<!-- svg filter for drop shadow -->
-<svg xmlns="http://www.w3.org/2000/svg" class="filter">
-    <defs>
-      <filter id="shadow">
-          <feTurbulence type="turbulence" baseFrequency="0.25"
-          numOctaves="5" result="turbulence"/>
-          <feDisplacementMap in2="turbulence" in="SourceGraphic"
-          scale="20" xChannelSelector="R" yChannelSelector="G" result="grainyShadow"/>
-          <feDisplacementMap in2="turbulence" in="SourceGraphic"
-          scale="50" xChannelSelector="R" yChannelSelector="G" result="grainyShadow2"/>
-          <feColorMatrix in="grainyShadow" result="colorCorrected"
-            type="matrix"
-            values="1 0 0 -1 0
-                    0 0 0 -1 0
-                    0 0 0 -1 0
-                    0 0 0 1 0" />
-        <feColorMatrix in="grainyShadow2" result="colorCorrected2"
-            type="matrix"
-            values="1 0 0 -1 0
-                    0 0 0 -1 0
-                    0 0 0 -1 0
-                    0 0 0 1 0" />
-  
-         <feMerge>
-           <feMergeNode in="colorCorrected"/>
-           <feMergeNode in="colorCorrected2"/>
-           <feMergeNode in="SourceGraphic"/>
-         </feMerge>
-        
-      </filter>
-    </defs>
-  </svg>
-  
 
 </body>
 </html>
