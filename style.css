@@ -1,7 +1,138 @@
 body {
-    background-color:lightsalmon;
+    background-color: #2A2F33;
 }
 
-p, h1 {
-    color: #dbc9bd;
+* {
+    padding: 0;
+    margin: 0;
+}
+
+::selection {
+    background: #F7D927; /* WebKit/Blink Browsers */
+  }
+  ::-moz-selection {
+    background: #F7D927; /* Gecko Browsers */
+  }
+  
+
+/*---------------- Typography!!! ----------------*/
+
+
+/* included type from adobe project  "Github Homepage"
+
+font-family: forma-djr-text, sans-serif;
+    — 300 normal
+    — 300 italic 
+    — 500 normal
+
+font-family: freighttextcmp-pro, serif;
+    — 300 normal
+    — 400 normal
+    */
+
+
+h1 {
+    font-family: freighttextcmp-pro, serif;
+    font-weight: 300;
+    font-style:normal;
+    font-size: 100pt;
+    line-height: 80pt;
+}
+
+h3 {
+    font-family: freighttextcmp-pro, serif;
+    font-weight: 300;
+    font-style:normal;
+    font-size: 40pt;
+    padding-top: 100px;
+}
+
+p, li, ul {
+    font-family: forma-djr-text, sans-serif;
+    font-weight: 500;
+    font-style:normal;
+    font-size: 30pt;
+    line-height: 28pt;
+}
+
+p {
+    padding-bottom: 16px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ff2a27;
+}
+
+.button-grid a:hover {
+    color: black;
+}
+
+.button-grid p {
+    padding-bottom: 0px;
+
+}
+
+/*---------------- layout !!! ----------------*/
+
+#container {
+    width: 90vw;
+    margin: 20px auto;
+
+}
+
+li {
+    border: 3px solid;
+    border-radius: 10mm;    
+    list-style: none;
+    text-align: center;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+li:hover {
+    background-color: lime;
+}
+
+ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    padding-top: 10px;
+}
+
+hr {
+    border: 2px solid black;
+    margin: 10px 0 30px;
+}
+
+/* nav */
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.brick {
+    width: 130px;
+    height: 130px;
+}
+
+.headline {
+    /* width: 60%; */
+}
+
+.brick-col {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
 }
