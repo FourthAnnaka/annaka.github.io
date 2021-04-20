@@ -1,0 +1,33 @@
+body {
+  position:relative;
+  margin:0px;
+  cursor: grab;
+}
+
+#canvas{
+  position: fixed;
+  top:0px;
+  left:0px;
+  width:100vw;
+  height:100vh;
+  background-image: url(seamless.gif);
+  background-size: contain;
+
+  z-index: 5;
+  mix-blend-mode: multiply;
+}
+
+.emoji {
+  font-size:130px;
+  position:absolute;
+}
+
+.emoji:last-child:hover {
+  cursor: grabbing;
+}
+
+#text {
+  z-index: 10;
+  text-align: center;
+  color: blue;
+}
