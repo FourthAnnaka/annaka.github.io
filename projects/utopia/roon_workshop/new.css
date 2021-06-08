@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.nav {
+
+}
+
+#canvas, #video {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+
+}
+
+.nav-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr  1fr;
+}
+
+
+.nav-buttons button {
+background-color:gainsboro;
+cursor: pointer;
+align: center;
+position: relative;
+height: 60px;
+color: black;
+border: 1px solid;
+border-radius: 7mm;
+}
+
+
+.nav-buttons button:active{
+background-color: blue;
+}
+.nav-buttons button:visited{
+  background-color: green;
+  }
+

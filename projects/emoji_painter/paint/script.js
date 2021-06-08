@@ -1,60 +1,56 @@
 // Get the element on the page with the id canvas
-let canvas = document.querySelector("#canvas");
-let isDrawing, points = [];
-
+let canvas = document.getElementById("canvas");
+let points = { x: 0, y: 0 };
+let isDrawing = false;
 let currentEmoji = "🦇";
+const emojiList = ["🦅", "🐝", "🧚🏻", "🦟", "🦋", "🐥"];
 
-// Detect the moment we press the mouse down on the canvas div
-canvas.addEventListener("mousedown", function(event){
-  isDrawing = true;
-
-
-  // Create a new emoji div on the page and set it equal to your desired emoji
+function draw() {
   let newEmoji = document.createElement("div");
   newEmoji.classList.add("emoji");
   newEmoji.innerHTML = currentEmoji;
-
-  // // Set the style of that position so that it goes where you just pressed your mouse down
-  // newEmoji.style.left = (event.pageX - 55) + "px";
-  // newEmoji.style.top = (event.pageY - 55) + "px";
-
-  points.push({ 
-    x: newEmoji.style.left = (event.pageX - 55) + "px",
-    y: newEmoji.style.top = (event.pageY - 55) + "px"
-  });
-
-  // Add that emoji to the canvas element so that it appears on the screen
+  (newEmoji.style.left = event.pageX - 55 + "px"),
+    (newEmoji.style.top = event.pageY - 55 + "px");
   canvas.appendChild(newEmoji);
+}
 
-  canvas.onmousemove = function(event) {
-    if (!isDrawing) return;
-    points.push({ 
-      x: newEmoji.style.left = (event.pageX - 55) + "px",
-      y: newEmoji.style.top = (event.pageY - 55) + "px"
-    });
+canvas.addEventListener("mousedown", function (event) {
+  isDrawing = true;
+  draw();
+});
+
+canvas.addEventListener("mousemove", function (event) {
+  if (isDrawing) {
+    draw();
   }
-  
-  
-  canvas.addEventListener("mouseup", function (event) {
-    isDrawing = false;
-  })
+});
 
-  
-  
-})
+canvas.addEventListener("mouseup", function () {
+  isDrawing = false;
+});
 
+window.addEventListener("resize", resize);
 
+function resize() {
+  console.log("resizing the browsers");
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  console.log(canvas.width + "px", canvas.height + "px");
+}
 
-
+function randomEmoji() {
+  currentEmoji = emojiList[Math.floor(Math.random() * emojiList.length)];
+}
 
 //  delete key clears anything inside #canvas
-document.addEventListener("keydown", function(pressed) {
+document.addEventListener("keydown", function (pressed) {
   if (pressed.key === "Backspace") {
     const canvasClear = document.getElementById("canvas");
     canvasClear.innerHTML = "";
     console.log("Canvas cleared!");
+  } else if (pressed.key === "a") {
+    randomEmoji();
   } else {
     console.log("This key does nothing.");
   }
-
-})
+});
