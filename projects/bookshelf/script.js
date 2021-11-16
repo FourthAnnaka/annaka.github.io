@@ -84,7 +84,10 @@ function showBookDetails(book, bookContainer) {
     book.fields.cover[0].url;
   bookData.getElementsByClassName("mobile-book-cover")[0].src =
     book.fields.cover[0].url;
-  // bookData.getElementsByClassName("data-title")[0].innerText = book.fields.title;
+  // bookData.getElementsByClassName("data-title")[0].innerText =
+  //   book.fields.title;
+  bookData.getElementsByClassName("data-author")[0].innerText =
+    book.fields.author;
   bookData.getElementsByClassName("data-pubdesc")[0].innerText =
     book.fields.pub_desc;
   bookData.getElementsByClassName("data-pubdate")[0].innerText =
