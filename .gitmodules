@@ -1,0 +1,3 @@
+[submodule "objlib"]
+	path = objlib
+	url = https://github.com/FourthAnnaka/objlib.git
