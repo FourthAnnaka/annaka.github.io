@@ -7,24 +7,189 @@
      font-style: normal;
  }
 
-h1, h2, h3, h4, h5, p {
+h1, h2, h3, h4, h5, p, li, a {
      font-family: 'moderatmedium';
-     font-size: 15pt;
+     font-size: 18pt;
+     padding: 0px;
+     margin: 0px;
+     color: #0000ff;
+}
+
+.onblue li, p, quote {
+     color:#ffffff;
+     text-decoration: none;
+     list-style: none;
      padding: 0px;
      margin: 0px;
 }
 
+ul {
+     padding: 0px;
+}
+
+h1 {
+     font-size: 22pt;
+     text-transform: uppercase;
+     letter-spacing: 2px;
+     margin-bottom: 30px;
+     margin: 15px;
+
+}
+
+h4 {
+     display: inline-block;
+}
+
+a {
+     text-decoration: none;
+}
+
 /* Structure */
+#main {
+     overflow: hidden; 
+}
+
+
+#content-wrap { 
+     display: flex;
+     flex-direction: row;
+}
+
+
+/* nav styles */
+
+#nav { 
+     /* margin: 100px 0px; */
+     /* position: -webkit-sticky; */
+     z-index: 100;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+     position: fixed;
+     top: 0px;
+     width: 100%;
+   }
+   
+   .sticky + .content-wrap {
+     padding-top: 300px;
+   }
+
+#logo-div {
+     background-color: #fff;;
+}
+
+#iw-logo {
+     padding: 15px;
+     width: 40vw;
+     background-color: #fff;
+     /* display: inline-block; */
+     /* padding-bottom: 100px; */
+}
+
+
+
+
+/* footer styles start here */
+
+footer {
+     background-color: #0000ff;
+     z-index: 100;
+     background-image: url('../img/clappinghands.gif');
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+     background-position-x: right ;
+     background-position-y: bottom;
+     background-blend-mode: darken;
+}
+
+.footer-links {
+     padding: 50px 15px 0px;
+}
+
+.hours-address {
+     padding: 50px 15px ;
+}
+
+#thesis { 
+     padding: 50px 15px 100px;
+     font-family: 'moderatmedium';
+     font-size: 18pt;
+     color: white;
+     width: 50%;     
+}
+
 
 #exhibitions {
-     background-color: white;
-     padding: 10px;
-     display: flex;
-     flex-direction: column;
+     width: 50%;
+     margin-top: 200px;
+     margin: 300px 15px 0px ;
+
+}
+
+#images {
+     width: 50%;
 }
 
 .single-exhibition {
      padding-bottom: 50px;
-     border: 1px solid red;
 
 }
+
+/* Wave Structure */
+/* WAVE WRAPPER BOX */
+.wavebox {
+     display: flex;
+     flex-direction: row;
+     align-content: center;
+     width: 120%;
+     position: relative;
+     left: -10%;
+     height: 100px;
+     overflow: hidden;
+}
+/* WAVE IMAGE STYLES */
+.wavefill {
+     background-image: url('../img/wave-fill.svg');
+}
+.waveborder {
+     background-image: url('../img/wave-curtain.svg');
+}
+.wavebackgroundsizing {
+     background-repeat: no-repeat;
+     background-size: 110vw;
+     background-position-x: center;  
+     background-position-y: bottom; 
+     /* height: 100px; */
+     width: 100%;
+     /* border: 1px solid pink; */
+}
+/* WAVE ANIMATION */
+@keyframes motionoftheocean {
+     0% {
+          position: relative;
+          left: -20px;
+     }
+     100% {
+          position: relative;
+          left: 20px;
+     }
+   }
+.rocksmetosleep {
+     position: relative;
+     animation-duration: 2s;
+     animation-name: motionoftheocean;
+     animation-iteration-count: infinite;
+     animation-direction: alternate;
+     animation-timing-function: ease-in-out;
+}
+
+
+/* #encore { 
+     width: 100vw;
+     height: 200px;
+     background-image: url('../img/clappinghands.gif');
+     
+} */
+
+

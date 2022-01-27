@@ -1,5 +1,0 @@
-.htaccess FILE: 
-RewriteEngine On
-RewriteCond %{HTTPS} off [OR]
-RewriteCond %{HTTP_HOST} !^www\.sequential\.space$ [NC]
-RewriteRule ^(.*)$ https://www.sequential.space/$1 [L,R=301]
